@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Operating System Project</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="contact.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="read_more.html">Documentation</a></li>
+          <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+          <li class="dropdown">
+            <a href="simulator.html" class="dropbtn">Simulators</a>
+            <div class="dropdown-content">
+              <a href="priority.html">Priority Preemptive</a>
+              <a href="reader_writer.html">Reader and Writer Solution</a>
+              <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+              <a href="page_replacement.html">Least Page used Replacement</a>
+            </div>
+          </li>
+          <li><a href="team.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <h3>GET IN TOUCH</h3>
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Email ID" required />
+          <input type="text" id="phone" placeholder="Phone No." required />
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="How can we help you?"
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          SecureToken: " fbe22f80-8be4-45a4-82a4-8342e9088ef0",
+          To: "darshilramani8@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "Website Suggestion from User",
+          Body:
+            "Name: " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Phone no: " +
+            document.getElementById("phone").value +
+            "<br> Message: " +
+            document.getElementById("message").value,
+        }).then((message) => alert("Message Sent Succesfully! Thankyou :)"));
+      }
+    </script>
+  </body>
+</html>

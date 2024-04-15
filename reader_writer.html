@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priority Preemptive Scheduler Simulator</title>
+    <link rel="stylesheet" href="reader_writer.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="read_more.html">Documentation</a></li>
+          <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+          <li class="dropdown">
+            <a href="simulator.html" class="dropbtn">Simulators</a>
+            <div class="dropdown-content">
+              <a href="priority.html">Priority Preemptive</a>
+              <!-- <a href="reader_writer.html">Reader and Writer Solution</a> -->
+              <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+              <a href="page_replacement.html">Least Page used Replacement</a>
+            </div>
+          </li>
+          <li><a href="team.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <button class="reader" onclick="startOperation('reader')">
+        Reader Enter
+      </button>
+      <button class="writer" onclick="startOperation('writer')">
+        Writer Enter
+      </button>
+    </div>
+    <table id="output">
+      <tr>
+        <th>Semaphore</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Mutex</td>
+        <td id="mutexValue">1</td>
+      </tr>
+      <tr>
+        <td>Wrt</td>
+        <td id="wrtValue">1</td>
+      </tr>
+      <tr>
+        <td>Reader Count</td>
+        <td id="readerCount">0</td>
+      </tr>
+      <tr>
+        <td>Reader Status</td>
+        <td id="readerStatus">No</td>
+      </tr>
+      <tr>
+        <td>Writer Status</td>
+        <td id="writerStatus">No</td>
+      </tr>
+    </table>
+    <table id="operationOutput" style="margin-top: 20px">
+      <tr>
+        <th>Type</th>
+        <th>Duration (s)</th>
+        <th>Status</th>
+      </tr>
+    </table>
+
+    <script src="reader_writer.js"></script>
+  </body>
+</html>

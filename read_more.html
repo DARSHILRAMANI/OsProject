@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="read_more.css">
+
+    <title>OS Documentation</title>
+</head>
+<body>
+    
+    <header>
+        <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="read_more.html">Documentation</a></li> -->
+                <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+                <li class="dropdown">
+                    <a href="simulator.html" class="dropbtn">Simulators</a>
+                    <div class="dropdown-content">
+                        <a href="priority.html">Priority Preemptive</a>
+                        <a href="reader_writer.html">Reader and Writer Solution</a>
+						<a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+					  <a href="page_replacement.html">Least Page used Replacement</a>
+                    </div>
+                </li>
+                <li><a href="team.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container_docs">
+        <h1>Overview of CPU Scheduling Algorithms</h1>
+        <img src="CPU.png" alt="CPU sch image">
+        <p>C algorithms are used by the operating system to determine which process should be executed
+            next. The goal of these algorithms is to improve system performance, minimize response time, and ensure
+            fairness. <br> <br>
+
+            There are several factors that need to be taken into account when scheduling CPU time for processes. These
+            include the priority of the process, the time required for the process to complete its task, the amount of
+            CPU time already used by the process, and the amount of time the process has spent waiting for input or
+            output operations. <br> <br>
+
+            Different CPU scheduling algorithms use different techniques to determine which process should be executed
+            next. Some algorithms prioritize processes based on their importance, while others prioritize processes
+            based on their execution time. Some algorithms use a fixed time slice for each process, while others
+            dynamically allocate time slices based on the requirements of the processes in the system. <br> <br>
+
+            In general, the goal of all CPU scheduling algorithms is to maximize system efficiency and provide the best
+            possible user experience by ensuring that processes are executed in a timely and efficient manner.
+        </p>
+    </section>
+
+  
+
+    <section class="container_docs" data-aos="zoom-in-up">
+        <h1>Types of CPU Scheduling Algorithms</h1>
+        <ul>
+            <li>First-Come, First-Served (FCFS): This algorithm schedules processes in the order they arrive in the
+                ready queue. The first process in the queue gets to use the CPU until it completes or gets blocked.</li>
+            <li>Shortest Job First (SJF): This algorithm schedules the process with the shortest burst time next,
+                ensuring that the shortest job is completed first. This algorithm is known to be optimal, but it
+                requires knowledge of the burst time of each process in advance.</li>
+            <li>Priority Scheduling: This algorithm assigns priorities to each process based on its importance or
+                resource requirements. The higher priority process gets to use the CPU first, and lower priority
+                processes have to wait.</li>
+            <li>Round Robin (RR): This algorithm allocates a fixed time slice to each process in the ready queue, and
+                processes are scheduled in a circular manner. If a process has not completed its work during its time
+                slice, it is preempted, and the next process gets a chance to execute</li>
+        </ul>
+        </p>
+    </section>
+
+    <section class="container_docs">
+        <h1>Overview of Disk Scheduling Algorithms</h1>
+        <img src="Disk.png" alt="Disk Scheduling Image">
+        <p>Disk scheduling algorithms are used by the operating system to manage the access of the disk by multiple
+            processes. The goal of these algorithms is to minimize disk access time, increase system throughput, and
+            ensure fairness.
+            <br><br>
+            Disk scheduling algorithms take into account the physical characteristics of the disk, including its
+            rotational speed, seek time, and transfer rate, as well as the location of data on the disk. Different disk
+            scheduling algorithms use different techniques to determine which process should be given access to the disk
+            next.
+        </p>
+    </section>
+
+    <section class="container_docs" data-aos="zoom-in-up">
+        <h1>Types of Disk Scheduling Algorithms</h1>
+        <ul>
+            <li>First-Come, First-Served (FCFS): This algorithm serves requests in the order they arrive in the queue.
+                The first request in the queue is served first, regardless of its location on the disk.</li>
+            <li>Shortest Seek Time First (SSTF): This algorithm serves the request that is closest to the current
+                position of the disk head, minimizing the seek time required to access the data.</li>
+            <li>SCAN: This algorithm moves the disk head in one direction, serving all requests in that direction until
+                there are no more requests in that direction, then reverses direction and serves all requests in the
+                other direction.</li>
+            <li>C-SCAN: This algorithm is similar to SCAN but always moves the disk head in one direction, serving
+                requests in that direction and wrapping around to the beginning of the disk when the end is reached.
+            </li>
+            <li>LOOK: This algorithm is similar to SCAN but only serves requests that are in the same direction as the
+                disk head, reducing the average seek time.</li>
+        </ul>
+        </p>
+    </section>
+
+    </p>
+    </section>
+</body>
+
+</html>

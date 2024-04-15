@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulator Page</title>
+    <link rel="stylesheet" type="text/css" href="simulator.css" />
+    <link rel="stylesheet" href="simulator.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="read_more.html">Documentation</a></li>
+          <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+          <li class="dropdown">
+            <a href="simulator.html" class="dropbtn">Simulators</a>
+            <div class="dropdown-content">
+                <a href="priority.html">Priority Preemptive</a>
+                <a href="reader_writer.html">Reader and Writer Solution</a>
+                <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+                <a href="page_replacement.html">Least Page used Replacement</a>
+            </div>
+          </li>
+          <li><a href="team.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="box-container">
+      <div class="box">
+        <h2>Priority Preemptive</h2>
+        <p>
+          Priority preemptive scheduling is a scheduling algorithm where each
+          process is assigned a priority. The scheduler selects the process with
+          the highest priority for execution. If a higher priority process
+          arrives, the currently running process may be preempted and placed
+          back in the ready queue. In the virtual lab, you can simulate multiple
+          processes arriving at different priorities and observe how the
+          scheduler switches between them based on their priorities.
+        </p>
+        <div class="btn-container">
+          <button onclick="window.location.href='priority.html'">
+            Simulator
+          </button>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Reader-Writer Solution</h2>
+        <p>
+          The reader-writer problem is a synchronization problem where multiple
+          readers can read a shared resource simultaneously, but only one writer
+          can modify the resource, and while a writer is writing, no reader can
+          access the resource. In the virtual lab, you can create multiple
+          reader and writer processes and demonstrate how they interact with the
+          shared resource, ensuring that readers can access it concurrently
+          while preventing writers from writing simultaneously.
+        </p>
+        <div class="btn-container">
+          <button onclick="window.location.href='reader_writer.html'">
+            Simulator
+          </button>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>First-Come-First-Serve Disk Scheduling</h2>
+        <p>
+          First-Come-First-Serve (FCFS) is a disk scheduling algorithm where the
+          requests are processed in the order they arrive. The head of the disk
+          moves in a direction, servicing all requests until it reaches the end
+          and then moves back. It has high waiting time for requests that arrive
+          later in the queue.
+        </p>
+        <div class="btn-container">
+          <button onclick="window.location.href='fcfs_disk_scheduling.html'">
+            Simulator
+          </button>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Least Recently Used (LRU) Page Replacement</h2>
+        <p>
+          LRU page replacement is a page replacement algorithm that replaces the
+          least recently used page when a new page needs to be brought into
+          memory. It's based on the principle that pages that have been used
+          least recently are the best candidates for replacement. In the virtual
+          lab, you can simulate a memory cache with limited space and multiple
+          pages competing for space. Demonstrate how the LRU algorithm decides
+          which page to evict when the cache is full and a new page needs to be
+          loaded.
+        </p>
+        <div class="btn-container">
+          </button>
+          <button
+            onclick="window.location.href='LRU.html'"
+          >
+            Simulator
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

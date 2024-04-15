@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priority Preemptive Scheduler Simulator</title>
+    <link rel="stylesheet" href="page_replacement.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="read_more.html">Documentation</a></li>
+          <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+          <li class="dropdown">
+            <a href="simulator.html" class="dropbtn">Simulators</a>
+            <div class="dropdown-content">
+              <a href="priority.html">Priority Preemptive</a>
+              <a href="reader_writer.html">Reader and Writer Solution</a>
+              <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+              <!-- <a href="page_replacement.html">Least Page used Replacement</a> -->
+            </div>
+          </li>
+          <li><a href="team.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Least Recently Used (LRU) Page Replacement</h1>
+    <form id="algorithmForm">
+      <label for="inputString">Reference String:</label>
+      <input type="text" id="inputString" name="inputString" required /><br />
+      <label for="inputFrames">Number of Frames:</label>
+      <input type="number" id="inputFrames" name="inputFrames" required /><br />
+      <button type="submit">Run Algorithm</button>
+    </form>
+
+    <div id="result"></div>
+    <script src="page_replacement.js"></script>
+  </body>
+</html>
